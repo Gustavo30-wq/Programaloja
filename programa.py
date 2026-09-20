@@ -28,9 +28,9 @@ print(XX4, P2, Salgadovalor)
 print(XX5, T2, Salgadovalor)
 
 while True:
-    escolha = input("Digite o código do produto que deseja comprar (e 'finalizar' para encerrar): ")
+    escolha = input("Digite o código do produto que deseja comprar (e 'concluir' para se encaminhar ao pagamento): ")
     
-    if escolha.lower() == 'finalizar':
+    if escolha.lower() == 'concluir':
         print("o valor total da sua compra é R$", conta)
         break
     elif escolha == C2:
