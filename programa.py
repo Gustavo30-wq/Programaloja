@@ -59,24 +59,25 @@ while True:
 if conta <= 49:
         print("Você não tem direito a desconto.")
 elif conta > 50 and conta <= 100:
-        conta = conta - (conta * desconto5)
         print("Você tem direito a 5% de desconto.")
 elif conta > 100 and conta <= 200:
-        conta = conta - (conta * desconto10)
         print("Você tem direito a 10% de desconto.")
 elif conta > 200:
-        conta = conta - (conta * desconto15)
         print("Você tem direito a 15% de desconto.")
+
+
 print(f"o valor original da compra sem desconto é R$ {conta}")
-if conta <= 49:
-        print("Você não tem direito a desconto.")
-elif conta > 50 and conta <= 100:
-        conta = conta - (conta * desconto5)
-        print("Você tem direito a 5% de desconto.")
-elif conta > 100 and conta <= 200:
-        conta = conta - (conta * desconto10)
-        print("Você tem direito a 10% de desconto.")
-elif conta > 200:
-        conta = conta - (conta * desconto15)
-        print("Você tem direito a 15% de desconto.")
+
+print(f"O desconto aplicado foi de R$ {conta * (desconto5 if conta <= 100 else desconto10 if conta <= 200 else desconto15)}")
+
 print(f"seu valor final da compra é R$ {conta}")
+
+Escolha = input("Qual forma de pagamento você deseja utilizar? (Dinheiro, Cartão ou Pix): ")
+if Escolha.lower() == "dinheiro":
+    print("Você escolheu pagar em dinheiro. Obrigado pela compra!")
+elif Escolha.lower() == "cartão":
+    print("Você escolheu pagar com cartão. Obrigado pela compra!")
+elif Escolha.lower() == "pix":
+    print("Você escolheu pagar via PIX. Obrigado pela compra!")
+else:
+    print("Forma de pagamento inválida. Obrigado pela compra!")
